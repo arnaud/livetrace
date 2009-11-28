@@ -1,0 +1,16 @@
+h1. README
+
+*Live Trace* enables automatic traces on existing Javascript code. Don't ever bother handling traces manually!
+
+h2. Install
+
+*"INSTALL Live Trace":http://wiki.github.com/arnaud/livetrace/bookmarklet* as a bookmarklet
+
+h2. Manual setup
+
+Wondering how to use it in your own pages? *Live Trace* is easy to set up:
+Simply add the following line before the ~</head>~ tag: ~<script src="http://bit.ly/livetrace"></script>~
+
+h2. Contributors
+
+ * "arnaud":http://github.com/arnaud (author)

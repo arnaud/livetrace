@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Live Trace demo</title>
+<style>
+#info {
+  padding: 5px;
+  background: #ffb;
+  border: 2px solid #ee0;
+  border-width: 2px 0;
+}
+form label {
+  width: 300px;
+}
+</style>
+<script>
+function Person(name) {
+  this.name = name || 'default name';
+  this.talk = function(message) {
+    document.getElementById('results').value = this.name + ' says: ' + message;
+  }
+}
+</script>
+<script>var before = Person;</script>
+<script src="../livetrace.js"></script>
+<script>var after = Person;</script>
+</head>
+<body>
+<h1>Live Trace demo</h1>
+<p id="info"><b>Live Trace is activated!</b> You can now open your browser's javascript console for displaying traces.</span>
+<form action="#" name="person">
+  <label for="name">Name:</label>
+  <input type="text" id="name" value="Bob" />
+  <br/>
+  <label for="message">Message:</label>
+  <input type="text" id="message" value="Hello!" />
+  <br/>
+  <input type="button" value="Talk" onclick="new Person(forms.person.name.value).talk(forms.person.message.value)" />
+</form>
+<label for="results">Results:</label><br/>
+<textarea id="results" cols="80" rows="2" disabled="disabled" style="background-color: #f9f9f9"></textarea>
+<br/>
+<hr/>
+<label for="before">Function <i>Person</i> (before):</label><br/>
+<textarea id="before" cols="80" rows="6" disabled="disabled" style="background-color: #f9f9f9"></textarea>
+<script>document.getElementById('before').value = before;</script>
+<br/>
+<label for="after">Function <i>Person</i> (after):</label><br/>
+<textarea id="after" cols="80" rows="8" disabled="disabled" style="background-color: #f9f9f9"></textarea>
+<script>document.getElementById('after').value = after;</script>
+</body>
+</html>
