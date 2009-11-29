@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Live Trace demo #2</title>
+  <style>
+  #info {
+    padding: 5px;
+    background: #ffb;
+    border: 2px solid #ee0;
+    border-width: 2px 0;
+  }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+  <script>var livetrace_debug = true;</script>
+  <script>var before = new String($);</script>
+  <script src="../livetrace.js"></script>
+  <script>var after  = new String($);</script>
+</head>
+<body>
+  <h1>Live Trace demo #2</h1>
+  <p id="info"><b>Live Trace is activated!</b> You can now open your browser's javascript console for displaying traces.</p>
+  <br/>
+  <label for="before">jQuery <i>'$'</i> selector (before):</label><br/>
+  <textarea id="before" cols="80" rows="6" disabled="disabled" style="background-color: #f9f9f9"></textarea>
+  <script>document.getElementById('before').value = before;</script>
+  <br/>
+  <label for="after">jQuery <i>'$'</i> selector (after):</label><br/>
+  <textarea id="after" cols="80" rows="8" disabled="disabled" style="background-color: #f9f9f9"></textarea>
+  <script>document.getElementById('after').value = after;</script>
+</body>
+</html>
