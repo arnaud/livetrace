@@ -1,6 +1,6 @@
 h1. README
 
-*Live Trace* enables automatic traces on existing Javascript code. Don't ever bother handling traces manually!
+*Live Trace* enables automatic traces on existing Javascript code. Don't ever bother handling traces manually! !http://stillmaintained.com/arnaud/livetrace.png!:http://stillmaintained.com/arnaud/livetrace
 
 h2. Install
 
